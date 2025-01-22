@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter un menu</title>
+</head>
+<body>
+    <h1>Ajouter un menu</h1>
+    {% if success %}
+        <p>Menu ajouté avec succès !</p>
+    {% endif %}
+    <form method="POST">
+        Date : <input type="date" name="date" required><br>
+        Type de repas : 
+        <select name="meal_type">
+            <option value="Midi">Midi</option>
+            <option value="Soir">Soir</option>
+        </select><br>
+        Entrée : <input type="text" name="entree"><br>
+        Plat principal : <input type="text" name="main_course" required><br>
+        Garniture : <input type="text" name="side_dish"><br>
+        Fromage : <input type="text" name="cheese"><br>
+        Dessert : <input type="text" name="dessert" required><br>
+        Potage : <input type="text" name="soup"><br>
+        <button type="submit">Ajouter</button>
+    </form>
+    <a href="/">Retour à l'accueil</a>
+</body>
+</html>
